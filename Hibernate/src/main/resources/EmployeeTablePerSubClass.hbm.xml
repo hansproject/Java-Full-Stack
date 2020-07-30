@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name = "com.hibernate.inheritance.Employee" table = "employeeList">
+
+        <meta attribute = "class-description">
+            This class contains the employee detail.
+        </meta>
+
+        <id name = "empID" type = "int" column = "empID">
+            <!--            <generator class="native"/>-->
+        </id>
+
+
+        <property name = "empName" column = "empName" type = "string"/>
+        <property name = "empAdd" column = "empAdd" type = "string"/>
+
+        <union-subclass name="com.hibernate.inheritance.RegEmployee" table="regEmp">
+
+            <property name="salary"></property>
+            <property name="bonus"></property>
+        </union-subclass>
+
+        <union-subclass name="com.hibernate.inheritance.ContractEmp" table="contEmp">
+            <property name="payPerHour"></property>
+            <property name="contractPeriod"></property>
+        </union-subclass>
+    </class>
+</hibernate-mapping>
