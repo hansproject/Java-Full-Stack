@@ -1,5 +1,5 @@
 ## Java-Full-Stack
-This repository contains programs develop using Core Java, Hibernate, Spring. It is split into sub folders such Hibernate, Spring...henceforth
+This repository contains programs develop using Core Java, Hibernate, Spring. 
 ### Connect with me:
 
 [<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
